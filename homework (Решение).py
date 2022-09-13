@@ -1,114 +1,67 @@
-# print('Упражнение 15')
-# my_list = []
-# i = 1
-# print('Введите 3 целых числа: ')
-# while i <= 3:
-#     value = int(input())
-#     my_list.append(value)
-#     i += 1
-# print('До сортировки', '\n', my_list)
-# print('Min', '\n', min(my_list))
-# print('Max', '\n', max(my_list))
-# print('Оставшееся число', '\n', sum(my_list) - (max(my_list) + min(my_list)))
-# print('*' * 30)
+print('Упражнение 35')
+# BASE = 4
+# PART = 140
+# PART_PRICE = 0.25
 #
-# print('Упражнение 16')
-# bread = 3.49    # Стоимость свежего хлеба
-# yesterday_bread = bread-(bread*0.6)     # Стоимость вчерашнего хлеба
-# print('Введите количество вчерашнего хлеба: ')
-# quantity_bread = int(input())    # Количество введеного хлеба
-# sum_bread=quantity_bread * yesterday_bread
-# print(f'Стоимость свежего: {bread} \n',
-#       f'Вчерашнего: {"%.2f" % yesterday_bread}\n',
-#       f'Общая стоимость вчерашнего {"%.2f" % sum_bread}\n')
-# print('*' * 30)
-
-# print('Упражнение 21')
 #
-# prise = 15  # Базовый тариф
-# call_center = 0.44  # 911
+# def taxi(distance):
+#     if not isinstance(distance, (int, float)):
+#         return 'Введите число'
+#     # if type(distance) == int or type(distance) == float :
+#     #     return 'Введите число'
+#     if distance <= 0:
+#         return f'{distance} должно быть больше 0!'
+#     metres = (distance * 1000) / PART
+#     sum = BASE + metres * PART_PRICE
+#     return f'{sum}$'
 #
-# print('Введите количество минут и смс, \n '
-#       'которые вы использовали \n')
-# minutes = int(input('Минут: '))
-# sms = int(input('СМС: '))
-# if minutes <= 50 and sms <= 50:
-#     basic_rate = prise + call_center + ((prise + call_center) * 0.05)  # Базовый тариф с налогом и кол.центром
-#     print(f'Базовый тариф составляет: {prise} $')
-#     print(f'Сумма в 911: {call_center} $')
-#     print('Налог составит', "%.2f" % ((prise + call_center) * 0.05), '$')
-#     print('Общая стоимость тарифа:', "%.2f" % basic_rate, '$')
-# elif minutes > 50 and sms <= 50:
-#     add_min = 0.25
-#     add_sms = 0.15
-#     min_not_rate = minutes - 50
-#     add_min_prise = min_not_rate * add_min
-#     full_prise = prise + call_center + add_min_prise + ((prise + call_center + add_min_prise) * 0.05)
-#     # print("%.2f" % full_prise)
-#     print(f'Базовый тариф составляет: {prise} $')
-#     print(f'Стоимость доп.минуты = {add_min},\n доп.смс = {add_sms}')
-#     print(f'Сумма в 911: {call_center} $')
-#     print('Налог составит', "%.2f" % ((prise + call_center + add_min_prise) * 0.05), '$')
-#     print(f'Доп минуты = {min_not_rate}, составят сумму', "%.2f" % add_min_prise, '$')
-#     print('Полная цена составит: ', "%.2f" % full_prise, '$')
-# elif minutes <= 50 and sms > 50:
-#     add_min = 0.25
-#     add_sms = 0.15
-#     sms_not_rate = sms - 50
-#     add_sms_prise = sms_not_rate * add_sms
-#     full_prise = prise + call_center + add_sms_prise + ((prise + call_center + add_sms_prise) * 0.05)
-#     # print("%.2f" % full_prise)
-#     print(f'Базовый тариф составляет: {prise} $')
-#     print(f'Стоимость доп.минуты = {add_min},\n доп.смс = {add_sms}')
-#     print(f'Сумма в 911: {call_center} $')
-#     print('Налог составит', "%.2f" % ((prise + call_center + add_sms_prise) * 0.05), '$')
-#     print(f'Доп смс = {sms_not_rate}, составят сумму', "%.2f" % add_sms_prise, '$')
-#     print('Полная цена составит: ', "%.2f" % full_prise, '$')
-# else:
-#     add_min = 0.25
-#     add_sms = 0.15
-#     sms_not_rate = sms - 50
-#     min_not_rate = minutes - 50
-#     add_min_prise = min_not_rate * add_min
-#     add_sms_prise = sms_not_rate * add_sms
-#     full_prise = prise + call_center + add_sms_prise + add_min_prise + \
-#                  ((prise + call_center + add_sms_prise + add_min_prise) * 0.05)
-#     # print("%.2f" % full_prise)
-#     print(f'Базовый тариф составляет: {prise} $')
-#     print(f'Стоимость доп.минуты = {add_min},\n доп.смс = {add_sms}')
-#     print(f'Сумма в 911: {call_center} $')
-#     print('Налог составит', "%.2f" % ((prise + call_center + add_sms_prise) * 0.05), '$')
-#     print(f'Доп минуты = {min_not_rate}, составят сумму', "%.2f" % add_min_prise, '$')
-#     print(f'Доп смс = {sms_not_rate}, составят сумму', "%.2f" % add_sms_prise, '$')
-#     print('Полная цена составит: ', "%.2f" % full_prise, '$')
-# print('*' * 30)
+#
+# print(taxi(0.14))
+# print(taxi(1))
+# print(taxi(0))
+# print(taxi(120))
+# print(taxi(-10))
+# print(taxi('0'))
 
-# print('Упражнение 22')
-# year = int(input('Введите год: \n'))
-# if year % 4 == 0 or ear % 400 == 0:
-#     print('Этот год високосный!')
-# else:
-#     print('Этот год НЕ високосный!')
-# print('*' * 30)
+# print('Упражнение 36')
+# first_item = 10.95
+# next_items = 2.95
+#
+#
+# def delivery(position=int(input('Введите количество позиций в заказе: \n'))):
+#     if position <= 0:
+#         return f'{position} позиций,должно быть больше 0!'
+#     if position == 1:
+#         return (f'{first_item}$')
+#
+#     else:
+#         full_prise = first_item + ((position - 1) * 2.95)
+#         return (f'{full_prise}$')
+#
+#
+# print(delivery())
 
-print('Упражнение 24')
-string = input('Введите номерной знак: ')
-print(string.upper())
-# print(len([i for i in string if i.isdigit()]))
-# print(len([i for i in string if i.isalpha()]))
+print('Упражнение 41')
 
-d = {'Буквы': 0, 'Цифры': 0}
-for i in string:
-    if i.isalpha():  # Подсчет количества букв
-        d['Буквы'] += 1
-    elif i.isdigit():  # Подсчет количества цифр
-        d['Цифры'] += 1
+password = input('Введите пароль: ')
 
-print(d['Цифры'], 'цифры', d['Буквы'], 'буквы!')
 
-if d['Буквы'] == 3 and d['Цифры'] == 3:
-    print('У вас старый формат номеров')
-elif d['Цифры'] == 4 and d['Буквы'] == 3:
-    print('У вас новый формат номеров')
+def goodPassword(password):
+    digit = 0
+    low_reg = 0  # Нижний регистр
+    up_reg = 0  # Верхний регистр
+    for symbol in password:
+        if symbol.isdigit():
+            digit = 1
+        if symbol.isalpha():
+            if symbol.islower():
+                low_reg = 1
+            else:
+                up_reg = 1
+    return len(password) >= 8 and digit and low_reg and up_reg
+
+
+if goodPassword(password):
+    print('Пароль надежный.')
 else:
-    print('Ошибка ввода')
+    print('Пароль ненадежный!')
